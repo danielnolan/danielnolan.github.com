@@ -1,1 +1,1 @@
-* My personal blog built using Jekyll
+# My personal blog built using Jekyll
