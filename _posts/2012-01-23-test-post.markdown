@@ -6,4 +6,4 @@ title: Some Super Cool Post Title
 
 <img class="postImgLrg" src="images/content/sampleBlogImg.jpg" width="590px" />
 
-This is some test text for the first post. This is pretty cool and dead simple.
+This is some test text for the first post.  This is pretty cool and dead simple.
