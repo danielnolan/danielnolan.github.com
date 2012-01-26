@@ -3,3 +3,4 @@ _site/*
 .class
 *.pyc
 *.pyo
+.project
