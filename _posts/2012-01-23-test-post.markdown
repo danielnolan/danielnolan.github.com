@@ -1,9 +1,24 @@
 ---
 layout: post
 title: Some Super Cool Post Title
+category: PHP
+
+tags:
+- Bugs
+- Slammed
+- Chon Lee
 ---
 
-
-<img class="postImgLrg" src="images/content/sampleBlogImg.jpg" width="590px" />
+<img class="postImgLrg" src="/images/content/sampleBlogImg.jpg" width="590px" />
 
 This is some test text for the first post.  This is pretty cool and dead simple.
+
+{% highlight php %}
+<?php 
+  echo "test";
+  $foo = bar;
+  foreach($foo as $key as $value) {
+    echo $value;
+  }  
+?>
+{% endhighlight %}
