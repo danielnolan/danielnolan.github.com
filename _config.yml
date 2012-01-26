@@ -1,0 +1,28 @@
+# Main
+url:  http://danielnolan.com
+title:  danielnolandotcom
+author: Daniel Nolan
+
+
+# Jekyll Config
+server: true
+server_port: 4000
+baseurl:  /
+
+
+auto: true
+safe: false
+pygments: true
+lsi: true
+exclude: Readme.markdown .rvmrc
+
+
+#plugins
+index_pages:
+  category:
+    do_related: false
+    title_prefix: 'Category: '
+  
+  tag:
+    do_related: false
+    title_prefix: 'Tag: '    
