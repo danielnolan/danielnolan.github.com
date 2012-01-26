@@ -1,43 +1,27 @@
- ---
+---
 layout: default
 ---
- 
+{% for post in site.posts %}
  <div class="contentBase "><!-- grey blog post area -->						
 									
-		<div class="blogPost"><!-- blog post content in here -->
+		<article class="blogPost"><!-- blog post content in here -->
 			
 			<span class="dateTag"><!-- blog post date tag wrapper -->
-				JUN 08 '08
+				{{ post.date | date_to_string }}
 			</span>
 	
-			<h1 class="postTitle">A sample blog post title goes here.</h1><!-- blog post H1 title -->
+			<h1 class="postTitle">{{ post.title }}</h1><!-- blog post H1 title -->
 			
-			<img class="postImgLrg" src="images/content/sampleBlogImg.jpg" width="590px" />
-			<h2>A sample blog post title goes here.</h2>
-			
-			<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</p><p>Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-
-			
-					   
-			<ol>
-			   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-			   <li>Aliquam tincidunt mauris eu risus.</li>
-			</ol>
-
-			<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
-
-			<h3>Header Level 3</h3>
-			<h1>A sample H1 title here</h1>
-			<ul>
-			   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-			   <li>Aliquam tincidunt mauris eu risus.</li>
-			</ul>
+			{{ post.content }}		
+			{% if post.tags %}
 			<div class="blogTags"><!-- keyword tag section -->
+				
 				<strong>TAGS:</strong>
-				<a href="#">Bug, </a>
-				<a href="#">Chon Lee, </a>
-				<a href="#">Roller, </a>
-				<a href="#">Slammed.</a>
+					{% for tag in post.tags limit: 3 %}
+						<a href="/tags/{{tag | replace:' ', '-' | downcase }}">{{ tag }}{% if forloop.last == false %}, {%endif %}</a> 
+					{% endfor %}
 			</div>
-		</div><!-- end post content -->
+			{% endif %}
+		</article><!-- end post content -->
 </div><!-- end grey content area -->
+{% endfor %}
