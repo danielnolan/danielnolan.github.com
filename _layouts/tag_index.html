@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<h1 class="page-title">
+  Tag Archives:&nbsp;
+  <a href="/tags/{{page.tag}}">{{page.tag}}</a>
+</h1>
+<ol class="archive">
+{% for post in site.tags[page.tag] %}
+  <li>
+    <div class="excerpt">
+      <strong class="entry-title">
+        <a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a>
+      </strong>
+      <span class="date small">
+        <abbr class="published" title="{{ post.date }}">{{ post.date | date_to_string }}</abbr>
+      </span>
+      <p class="alt-font">
+        Posted in&nbsp;
+		{% for tag in post.tags limit: 3 %}<a href="/tags/{{tag | replace:' ', '-' | downcase }}">{{ tag }}{% if forloop.last == false %}, {%endif %}</a> {% endfor %}
+      </p>
+    </div>
+  </li>
+{% endfor %}
+</ol>
