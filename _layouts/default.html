@@ -4,23 +4,24 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<title>{{ page.title }}</title>
-	  <meta name="description" content="">
-	  <link rel="stylesheet" href="css/style.css">
-	  <!--sans body font-->
-	  <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
-	  <!-- headings -->
-	  <link href='http://fonts.googleapis.com/css?family=Alike' rel='stylesheet' type='text/css'>
+	  	<meta name="description" content="">
+	  	<link rel="stylesheet" href="/css/style.css">
+	  	<link rel="stylesheet" href="/css/pygments.css">
+	  	<!--sans body font-->
+	  	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
+	  	<!-- headings -->
+	  	<link href='http://fonts.googleapis.com/css?family=Alike' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<div class="wrapper">
 			
 			<div id="logoHeader">
-				<a href="#"><img src="images/logo.jpg" id="dLogo" /></a>
+				<a href="/"><img src="/images/logo.jpg" id="dLogo" /></a>
 				
 				<ul>
-					<li class="selected"><a href="#">home</a></li>
-					<li><a href="#">work</a></li>
-					<li><a href="#">contact</a></li>
+					<li class="selected"><a href="/">home</a></li>
+					<li><a href="/work.html">work</a></li>
+					<li><a href="/stalk_me.html">stalk me</a></li>
 				</ul>	
 				
 			</div>
@@ -36,35 +37,30 @@
 						<div class="sideBarBox"><!-- start sidebar wrapper box -->
 							<h2 class="side">A Little About Me...</h2>
 							<div class="sideBoxContent">
-								<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+								<p> 
+									I am a professional software engineer, currently living in Florida. 
+									When I am not in front of a computer, I enjoy working on cars, Volkswagens 
+									to be specific. I am a dog lover, I have a red Min Pin named Scrappy Doo.
+									Dunkin' Douhnuts Coffee helps me get shit done. I am also an avid beer drinker, 
+									and I prefer IPAs the hoppier the better. I like to take pictures too, although 
+									I don't have as much time to dedicate to it as I wish I did.
+								</p>
 							</div>
 						
 						</div><!-- end sidebar wrapper box -->
 						
 						
 						<div class="sideBarBox"><!-- start sidebar wrapper box -->
-							<h2 class="side">Another Header Title...</h2>
+							<h2 class="side">Categories</h2>
+
 							<div class="sideBoxContent">
-								<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. </p><p>Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-							
-								<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-
-								<h2>Header Level 2</h2>
-										   
-								<ol>
-								   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-								   <li>Aliquam tincidunt mauris eu risus.</li>
-								</ol>
-
-								<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
-
-								<h3>Header Level 3</h3>
-
-								<ul>
-								   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-								   <li>Aliquam tincidunt mauris eu risus.</li>
-								</ul>
-							
+								
+								<ul> 
+								{% for category in site.categories %} 
+								  <li><a href="/categories/{{category | first}}">{{ category | first }}</a></li> 
+								{% endfor %} 
+								</ul> 
+															
 							</div>
 							
 						</div><!-- end sidebar wrapper box -->
