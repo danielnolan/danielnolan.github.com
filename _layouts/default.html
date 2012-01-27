@@ -1,81 +1,100 @@
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">	
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<title>{{ page.title }}</title>
-	  	<meta name="description" content="">
-	  	<link rel="stylesheet" href="/css/style.css">
-	  	<link rel="stylesheet" href="/css/pygments.css">
-	  	<!--sans body font-->
-	  	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
-	  	<!-- headings -->
-	  	<link href='http://fonts.googleapis.com/css?family=Alike' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-		<div class="wrapper">
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+    Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>{{ page.title }}</title>
+  	<meta name="description" content="">
+	<meta name="author" content="Daniel Nolan" />
+  	
+  	<link rel="stylesheet" href="/css/style.css">
+  	<link rel="stylesheet" href="/css/pygments.css">
+  	<!--sans body font-->
+  	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
+  	<!-- headings -->
+  	<link href='http://fonts.googleapis.com/css?family=Alike' rel='stylesheet' type='text/css'>
+  	
+  	<link rel="shortcut icon" href="/favicon.ico" />
+  	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />  	
+  	
+  	<script src='http://code.jquery.com/jquery-latest.js'></script>
+	<script type="text/javascript">
+		$(function(){
+		   var path = location.pathname.substring(1);
+		   if(path == '') {
+		      path = '/';
+		   }
+		   if(path)
+		     $('#mainNav a[href$="' + path + '"]').attr('class', 'selected');
+		 });
+	</script>
+</head>
+<body>		
+	<div class="wrapper">
+		
+		<div id="logoHeader">
+			<a href="/"><img src="/images/logo.jpg" id="dLogo" alt="logo"/></a>
 			
-			<div id="logoHeader">
-				<a href="/"><img src="/images/logo.jpg" id="dLogo" /></a>
+			<ul id="mainNav">
+				<li><a href="/">home</a></li>
+				<li><a href="/work.html">work</a></li>
+				<li><a href="/stalk_me.html">stalk me</a></li>
+			</ul>	
+			
+		</div>
 				
-				<ul>
-					<li class="selected"><a href="/">home</a></li>
-					<li><a href="/work.html">work</a></li>
-					<li><a href="/stalk_me.html">stalk me</a></li>
-				</ul>	
-				
-			</div>
+		<!-- clean up navBG files, fonts, etc -->
+
+			<div id="colLt">
+				  {{ content }}
+			</div><!-- end left col-->
+
+			<div id="colRt">
 					
-			<!-- clean up navBG files, fonts, etc -->
+					<div class="sideBarBox"><!-- start sidebar wrapper box -->
+						<h2 class="side">A Little About Me...</h2>
+						<div class="sideBoxContent">
+							<p> 
+								I am a professional software engineer, currently living in Florida. 
+								When I am not in front of a computer, I enjoy working on cars, Volkswagens 
+								to be specific. I am a dog lover, I have a red Min Pin named Scrappy Doo.
+								Dunkin' Douhnuts Coffee helps me get shit done. I am also an avid beer drinker, 
+								and I prefer IPAs the hoppier the better. I like to take pictures too, although 
+								I don't have as much time to dedicate to it as I wish I did.
+							</p>
+						</div>
+					
+					</div><!-- end sidebar wrapper box -->
+					
+					
+					<div class="sideBarBox"><!-- start sidebar wrapper box -->
+						<h2 class="side">Categories</h2>
 
-				<div id="colLt">
-					  {{ content }}
-				</div><!-- end left col-->
-
-				<div id="colRt">
-						
-						<div class="sideBarBox"><!-- start sidebar wrapper box -->
-							<h2 class="side">A Little About Me...</h2>
-							<div class="sideBoxContent">
-								<p> 
-									I am a professional software engineer, currently living in Florida. 
-									When I am not in front of a computer, I enjoy working on cars, Volkswagens 
-									to be specific. I am a dog lover, I have a red Min Pin named Scrappy Doo.
-									Dunkin' Douhnuts Coffee helps me get shit done. I am also an avid beer drinker, 
-									and I prefer IPAs the hoppier the better. I like to take pictures too, although 
-									I don't have as much time to dedicate to it as I wish I did.
-								</p>
-							</div>
-						
-						</div><!-- end sidebar wrapper box -->
-						
-						
-						<div class="sideBarBox"><!-- start sidebar wrapper box -->
-							<h2 class="side">Categories</h2>
-
-							<div class="sideBoxContent">
-								
-								<ul> 
-								{% for category in site.categories %} 
-								  <li><a href="/categories/{{category | first}}">{{ category | first }}</a></li> 
-								{% endfor %} 
-								</ul> 
-															
-							</div>
+						<div class="sideBoxContent">
 							
-						</div><!-- end sidebar wrapper box -->
+							<ul> 
+							{% for category in site.categories %} 
+							  <li><a href="/categories/{{category | first}}">{{ category | first }}</a></li> 
+							{% endfor %} 
+							</ul> 
+														
+						</div>
 						
+					</div><!-- end sidebar wrapper box -->
 					
+				
 
 
-				</div><!-- end right col-->
+			</div><!-- end right col-->
 
 
-			
-			
-			
+		
+		
+		
 
-			<br class="clear"/>
-		</div><!-- End Wrapper -->
-	</body>
+		<br class="clear"/>
+	</div><!-- End Wrapper -->
+</body>
 </html>
