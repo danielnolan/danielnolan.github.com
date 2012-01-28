@@ -160,7 +160,7 @@ a:hover {
 	border-left:#fff
 	
 }
-#logoHeader ul li.selected {
+#logoHeader ul li a.selected {
 	background: url(../images/navArrow.jpg) no-repeat bottom center;
 }
 
