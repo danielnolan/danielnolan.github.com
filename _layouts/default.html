@@ -76,7 +76,7 @@
 							
 							<ul> 
 							{% for category in site.categories %} 
-							  <li><a href="/categories/{{category | first}}">{{ category | first }}</a></li> 
+							  <li><a href="/categories/{{category | first | replace:' ', '-' | downcase}}">{{ category | first }}</a></li> 
 							{% endfor %} 
 							</ul> 
 														
