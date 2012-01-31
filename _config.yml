@@ -9,12 +9,12 @@ server: true
 server_port: 4000
 baseurl:  /
 
-
+permalink:	/:year/:month/:day/:title/
 auto: true
 safe: false
 pygments: true
-lsi: true
-exclude: Readme.markdown .rvmrc
+lsi: false
+exclude: Readme.markdown .rvmrc Gemfile Gemfile.lock
 
 
 #plugins
