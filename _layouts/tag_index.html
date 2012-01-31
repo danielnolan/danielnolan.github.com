@@ -4,7 +4,7 @@ layout: default
 
 <h1 class="page-title">
   Tag Archives:&nbsp;
-  <a href="/tags/{{page.tag}}">{{page.tag}}</a>
+  <a href="/tags/{{page.tag | replace:' ', '-' | downcase }}">{{page.tag}}</a>
 </h1>
 <ol class="archive">
 {% for post in site.tags[page.tag] %}
