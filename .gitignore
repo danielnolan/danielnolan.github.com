@@ -4,3 +4,4 @@ _site/*
 *.pyc
 *.pyo
 .project
+.DS_Store
