@@ -105,6 +105,17 @@ h4 {
 }
 p {
 	font-size:17px;
+	line-height:21px
+}
+ul {
+	padding-left:20px;
+	font-size: 20px;
+	list-style-type:square;
+	color:#7E982C
+}
+li{
+	margin-bottom:5px
+
 }
 blockquote {
 	font-style:italic;
@@ -122,6 +133,10 @@ a:link, a:visited {
 a:hover {
 	text-decoration: none;
 	color: #657e16;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition:    all 0.5s ease;
+	-ms-transition:     all 0.5s ease;
+	-o-transition:      all 0.5s ease;
 }
 
 
@@ -129,7 +144,7 @@ a:hover {
 
 /*---- main navigation -----*/
 #logoHeader ul {  
-	width:270px;
+	width:265px;
 	height:51px;
 	position:absolute;
 	right:18px;
@@ -141,7 +156,6 @@ a:hover {
 #logoHeader ul li {
 	display: inline;
 	float:left;
-	margin: 0, auto;
 }
 #logoHeader ul li a {
 	float:left;
@@ -158,7 +172,8 @@ a:hover {
 #logoHeader ul li a:hover {
 	color:#c7e860;
 	background:url(../images/navBg.png) repeat-x;
-	border-left:#fff
+	border-left:#fff;
+	background:#38401e;
 	
 }
 #logoHeader ul li a.selected {
@@ -190,12 +205,12 @@ h1.postTitle {
 	width:600px;
 	padding:15px;
 	position:relative;
-	margin-bottom:30px
+	margin-bottom:40px
 }
 
 .dateTag {
 	position:absolute;
-	top:12px;
+	top:10px;
 	left:-9px;
 	background:#91ae35;
 	padding:5px 7px;
@@ -210,7 +225,7 @@ h1.postTitle {
 .postImgLrg {
 	border:5px solid white;
 	box-shadow: 0 0 5px 1px #ababab;
-	margin-bottom: 20px
+	/*margin-bottom: 20px*/
 }
 .blogTags {
 	font-size:15px;
@@ -246,8 +261,27 @@ h2.tagHdr {
  }
 .sideBoxContent {
 	border-top:1px solid #313131;
-	padding:0px 18px 15px 18px;
+	padding:0px 18px 3px 18px;
 	color:#fff;
+}
+.sideBoxContent ul li {
+	margin:0 0 0px -20px;
+	padding:5px 0 5px 10px;
+	list-style-type:none;
+	border-bottom:1px solid #38401e
+}
+
+
+.sideBoxContent ul li:hover {
+	background:#38401e;
+}
+.sideBoxContent ul li a {
+	width:95%;
+	display:block;
+	padding:2% 0 2% 5%
+}
+.sideBoxContent ul li a:hover {
+	color:white
 }
 #colRt h2.side { 
 	padding:13px ;
@@ -298,5 +332,45 @@ input, select, label, textarea {
 	box-shadow: 2px 2px 4px 0 #323232;
 	color:#222
 }
-/* contact form specific */
+
+/*------------ contact page -------------*/
+ul#contactList  {
+	margin-left:60px
+}
+#contactList li {
+	list-style: none
+}
+
+a.contactIcon_1, a.contactIcon_2, a.contactIcon_3, a.contactIcon_4, a.contactIcon_5 {
+	width:455px;
+	display:block;
+	cursor:pointer	
+}
+a.contactIcon_1 {
+	background: url(../images/contactSlice_1.jpg) no-repeat;
+	height:93px;
+}
+a.contactIcon_2 {
+	background: url(../images/contactSlice_2.jpg) no-repeat;
+	height:92px;
+}
+a.contactIcon_3{
+	background: url(../images/contactSlice_3.jpg) no-repeat;
+	height:90px;
+}
+a.contactIcon_4 {
+	background: url(../images/contactSlice_4.jpg) no-repeat;
+	height:92px;
+}
+a.contactIcon_5 {
+	background: url(../images/contactSlice_5.jpg) no-repeat;
+	height:88px;
+}
+a.contactIcon_1:hover, a.contactIcon_2:hover, a.contactIcon_3:hover, a.contactIcon_4:hover, a.contactIcon_5:hover {
+	background-position: -455px 0;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition:    all 0.3s ease;
+	-ms-transition:     all 0.3s ease;
+	-o-transition:      all 0.3s ease;
 	
+}

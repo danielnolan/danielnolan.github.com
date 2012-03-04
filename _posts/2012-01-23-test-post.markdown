@@ -1,7 +1,11 @@
 ---
 layout: post
 title: Some Super Cool Post Title
-category: PHP
+
+categories: 
+- PHP
+- VW
+- EXTJS
 
 tags:
 - Bugs
