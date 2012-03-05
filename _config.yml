@@ -17,6 +17,8 @@ lsi: false
 exclude: Readme.markdown .rvmrc Gemfile Gemfile.lock
 
 
+excerpt_link:  "Read More&hellip;"
+
 #plugins
 index_pages:
   category:
