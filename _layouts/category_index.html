@@ -6,23 +6,20 @@ layout: default
   Category Archives:&nbsp;
   <a href="/categories/{{page.category | replace:' ', '-' | downcase }}">{{page.category}}</a>
 </h1>
-<ol class="archive">
-{% for post in site.categories[page.category] %}
-  <li>
-    <div class="excerpt">
-      <strong class="entry-title">
-        <a href="{{ post.url }}" title="{{ post.title }}" rel="bookmark">{{ post.title }}</a>
-      </strong>
-      <span class="date small">
-        <abbr class="published" title="{{ post.date }}">{{ post.date | date_to_string }}</abbr>
-      </span>
-      <p class="alt-font">
-        Posted in&nbsp;
-        {% for category in post.categories %}
-        <a href="/categories/{{ category | replace:' ', '-' | downcase }}" title="{{ category }}" rel="category tag">{{ category }}</a>
+ <div class="contentBase "><!-- grey blog post area --> 
+  {% for post in site.categories[page.category] %}
+  <article class="blogPost">
+    <span class="dateTag">{{ post.date | date_to_string }}</span>
+    <h1 class="postTitle">{{ post.title }}</h1>
+    <p>{{ post.description }}</p>
+    <a class="more-link" href="{{ post.url }}">{{ site.excerpt_link }}</a>
+    <div class="blogTags"><!-- keyword tag section -->
+      
+      <strong>TAGS:</strong>
+        {% for tag in post.tags limit: 3 %}
+          <a href="/tags/{{tag | replace:' ', '-' | downcase }}">{{ tag }}{% if forloop.last == false %}, {%endif %}</a> 
         {% endfor %}
-      </p>
     </div>
-  </li>
-{% endfor %}
-</ol>
+  </article>    
+  {% endfor %}
+</div>
