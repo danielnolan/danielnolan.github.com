@@ -11,6 +11,8 @@ tags:
 - Bugs
 - Slammed
 - Chon Lee
+
+description: This is a test description of the test post.
 ---
 
 <img class="postImgLrg" src="/images/content/sampleBlogImg.jpg" width="590px" />
