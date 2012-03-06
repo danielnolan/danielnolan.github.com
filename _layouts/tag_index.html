@@ -2,10 +2,9 @@
 layout: default
 ---
 
-<h1 class="page-title">
-  Tag Archives:&nbsp;
-  <a href="/tags/{{page.tag | replace:' ', '-' | downcase }}">{{page.tag}}</a>
-</h1>
+<h3 class="tagTitle">
+  Tag:&nbsp;{{page.tag}}
+</h3>
 <div class="contentBase">
 {% for post in site.tags[page.tag] %}
   <article class="blogPost">
