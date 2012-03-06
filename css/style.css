@@ -78,7 +78,7 @@ h1, h2, h3, h4, .dateTag {
 	font-family: 'Alike', serif;
 	font-weight:bold;
 }
-h1, h2, h3, h4 {  
+h1, h2, h3, h4, h5 {  
 	font-weight:bold;
 	color:#636363;
 	text-shadow: 1px 1px 0px #fff;
@@ -102,6 +102,9 @@ h3 {
 }
 h4 {
 	font-size:18px
+}
+h5 {
+	font-size:20px;
 }
 p {
 	font-size:17px;
@@ -207,7 +210,9 @@ h3.tagTitle {
 .blogPost h2 {
 	margin-top:0
 }
-
+.blogPost h5 {
+	margin-bottom: 15px;
+}
 .contentBase { 
 	background:#e5e5e5;
 	border:1px solid #fff;
