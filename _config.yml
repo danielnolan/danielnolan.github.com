@@ -5,7 +5,7 @@ author: Daniel Nolan
 
 
 # Jekyll Config
-server: true
+server: false
 server_port: 4000
 baseurl:  /
 
