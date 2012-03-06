@@ -2,10 +2,9 @@
 layout: default
 ---
 
-<h1 class="page-title">
-  Category Archives:&nbsp;
-  <a href="/categories/{{page.category | replace:' ', '-' | downcase }}">{{page.category}}</a>
-</h1>
+<h3 class="catTitle">
+  Category:&nbsp;{{page.category}}
+</h3>
  <div class="contentBase "><!-- grey blog post area --> 
   {% for post in site.categories[page.category] %}
   <article class="blogPost">
