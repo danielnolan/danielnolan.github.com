@@ -75,8 +75,8 @@
 						<div class="sideBoxContent">
 							
 							<ul> 
-							{% for category in site.categories %} 
-							  <li><a href="/categories/{{category | first | replace:' ', '-' | downcase}}">{{ category | first }}</a></li> 
+							{% for category in site.iterable.categories %} 
+							  <li><a href="/categories/{{category.name | replace:' ', '-' | downcase}}">{{ category.name }}</a></li> 
 							{% endfor %} 
 							</ul> 
 														
