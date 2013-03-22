@@ -6,4 +6,4 @@ The following directories, pages, and their contents are Copyright &copy; Daniel
 * _posts/
 * images/
 * work.html
-* stalk_me.html
+* contact.html
