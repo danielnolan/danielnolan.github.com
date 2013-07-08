@@ -3,19 +3,11 @@ url:  http://danielnolan.com
 title:  danielnolandotcom
 author: Daniel Nolan
 
-
-# Jekyll Config
-server: false
-server_port: 4000
-baseurl:  /
-
 permalink:	/:year/:month/:day/:title/
-auto: true
 safe: false
 pygments: true
 lsi: false
-exclude: Readme.markdown .rvmrc Gemfile Gemfile.lock
-
+exclude: [Readme.markdown, .ruby-version, .ruby-gemset, Gemfile, Gemfile.lock]
 
 excerpt_link:  "Read More&hellip;"
 
