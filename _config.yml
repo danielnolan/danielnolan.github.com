@@ -7,7 +7,7 @@ permalink:	/:year/:month/:day/:title/
 safe: false
 pygments: true
 lsi: false
-exclude: [Readme.markdown, .ruby-version, .ruby-gemset, Gemfile, Gemfile.lock]
+exclude: [Readme.markdown, .ruby-version, vendor, .ruby-gemset, Gemfile, Gemfile.lock]
 
 excerpt_link:  "Read More&hellip;"
 
