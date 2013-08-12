@@ -1,3 +1,6 @@
+vendor/bundle/*
+bin/
+.bundle/
 _drafts/
 _site/*
 .class
