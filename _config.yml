@@ -8,6 +8,7 @@ safe: false
 pygments: true
 lsi: false
 exclude: [Readme.markdown, .ruby-version, vendor, .ruby-gemset, Gemfile, Gemfile.lock]
+paginate: 4
 
 excerpt_link:  "Read More&hellip;"
 
