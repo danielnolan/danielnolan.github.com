@@ -11,8 +11,9 @@ title: danielnolandotcom
 				<i class="fa fa-calendar"></i>
 				{{ post.date | date_to_string }}
 			</span>
-	
-			<h1 class="postTitle">{{ post.title }}</h1><!-- blog post H1 title -->
+			<a href="{{post.url}}">	
+				<h1 class="postTitle">{{ post.title }}</h1><!-- blog post H1 title -->
+			</a>
 			
 			{{ post.content }}		
 			{% if post.tags %}
