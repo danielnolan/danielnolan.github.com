@@ -1,102 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
-    Remove this if you use the .htaccess -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<html>
+  <head>
 	<title>{{ page.title }}</title>
-  	<meta name="description" content="">
-	<meta name="author" content="Daniel Nolan" />
-  	
-  	<link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" >
+
   	<link rel="stylesheet" href="/css/pygments.css">
-  	<!--sans body font-->
-  	<link href='//fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
-  	<!-- headings -->
-  	<link href='//fonts.googleapis.com/css?family=Alike' rel='stylesheet' type='text/css'>
-  	
+  	<link rel="stylesheet" href="/css/style.css">
+
+	<meta name="author" content="Daniel Nolan" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
   	<link rel="shortcut icon" href="/favicon.ico" />
-  	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />  	
-  	
-  	<script src='//code.jquery.com/jquery-latest.js'></script>
-	<script type="text/javascript">
-		$(function(){
-		   var path = location.pathname.substring(1);
-		   if(path == '') {
-		      path = '/';
-		   }
-		   if(path)
-		     $('#mainNav a[href$="' + path + '"]').attr('class', 'selected');
-		 });
-	</script>
-</head>
-<body>		
-	<div class="wrapper">
-		
-		<div id="logoHeader">
-			<a href="/"><img src="/images/logo.jpg" id="dLogo" alt="logo"/></a>
-			
-			<ul id="mainNav">
-				<li><a href="/">home</a></li>
-				<li><a href="/work.html">work</a></li>
-				<li><a href="/contact.html">get @ me</a></li>
-			</ul>	
-			
+  	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  </head>
+  <body>
+	<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a class="navbar-brand" href="/">DanielNolan.com</a>
 		</div>
-				
-		<!-- clean up navBG files, fonts, etc -->
+	  </div><!-- /.container -->
+	</div><!-- /.navbar -->
 
-			<div id="colLt">
-				  {{ content }}
-			</div><!-- end left col-->
-
-			<div id="colRt">
-					
-					<div class="sideBarBox"><!-- start sidebar wrapper box -->
-						<h2 class="side">A Little About Me...</h2>
-						<div class="sideBoxContent">
-							<p> 
-								I am a professional web developer, currently living in Florida. 
-								I <3 my beautiful girlfriend Laurie.
-								When I am not in front of a computer, I enjoy working on cars, Volkswagens 
-								to be specific. I am a dog lover, I have two Min Pins a red one 
-								named Scrappy Doo & a black and tan one named Jet.
-								Dunkin' Douhnuts Coffee helps me get shit done. I am also an avid beer drinker, 
-								and I prefer IPAs the hoppier the better. I like to take pictures too, although 
-								I don't have as much time to dedicate to it as I wish I did.
-							</p>
-						</div>
-					
-					</div><!-- end sidebar wrapper box -->
-					
-					
-					<div class="sideBarBox"><!-- start sidebar wrapper box -->
-						<h2 class="side">Categories</h2>
-
-						<div class="sideBoxContent">
-							
-							<ul> 
-							{% for category in site.iterable.categories %} 
-							  <li><a href="/categories/{{category.name | replace:' ', '-' | downcase}}">{{ category.name }}</a></li> 
-							{% endfor %} 
-							</ul> 
-														
-						</div>
-						
-					</div><!-- end sidebar wrapper box -->
-					
-				
-
-
-			</div><!-- end right col-->
-
-
-		
-		
-		
-
-		<br class="clear"/>
-	</div><!-- End Wrapper -->
-</body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				{{ content }}
+			</div>
+		    <div class="col-md-4">
+				<div class"sideBoxContent">
+					<h2>
+						<img src="http://www.gravatar.com/avatar/1894aa33479313caba1a8d8a0bc13f3b.png" alt="..." class="img-circle">
+						A Little About Me...
+					</h2>
+					<p>
+						I am a professional web developer, currently living in Florida.
+						I <3 my beautiful girlfriend Laurie.
+						When I am not in front of a computer, I enjoy working on cars, Volkswagens
+						to be specific. I am a dog lover, I have a black and tan min pin named Jet.
+						Dunkin' Douhnuts Coffee helps me get shit done. I am also an avid beer drinker,
+						and I prefer IPAs the hoppier the better. I like to take pictures too, although
+						I don't have as much time to dedicate to it as I wish I did.
+					</p>
+				</div>
+				<div class="sideBoxContent">
+					<h2>Categories</h2>
+					<ul class="nav nav-pills nav-stacked">
+						{% for category in site.iterable.categories %}
+						  <li><a href="/categories/{{category.name | replace:' ', '-' | downcase}}">{{ category.name }}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  </body>
 </html>
