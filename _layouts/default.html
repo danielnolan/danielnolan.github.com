@@ -42,15 +42,15 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-9">
 				{{ content }}
 			</div>
-		    <div class="col-md-4">
+		    <div class="col-md-3">
 				<div class"sideBoxContent">
-					<h2>
-						<img src="http://www.gravatar.com/avatar/1894aa33479313caba1a8d8a0bc13f3b.png" alt="..." class="img-circle">
+					<p><img src="http://www.gravatar.com/avatar/1894aa33479313caba1a8d8a0bc13f3b.png" alt="..." class="img-circle"></p>
+					<h3>
 						A Little About Me...
-					</h2>
+					</h3>
 					<p>
 						I am a professional web developer, currently living in Florida.
 						I <3 my beautiful girlfriend Laurie.
@@ -62,7 +62,7 @@
 					</p>
 				</div>
 				<div class="sideBoxContent">
-					<h2>Categories</h2>
+					<h3>Categories</h3>
 					<ul class="nav nav-pills nav-stacked">
 						{% for category in site.iterable.categories %}
 						  <li><a href="/categories/{{category.name | replace:' ', '-' | downcase}}">{{ category.name }}</a></li>
