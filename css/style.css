@@ -2,3 +2,7 @@ body {
   position: relative;
   padding-top: 60px;
 }
+
+pre {
+  background-color:#073642;
+}
