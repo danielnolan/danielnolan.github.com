@@ -2,39 +2,39 @@
 layout: secondary
 ---
 
- <div class="well"><!-- grey blog post area -->						
-									
-		<article class="blogPost"><!-- blog post content in here -->
-			<span class="dateTag"><!-- blog post date tag wrapper -->
-			  <i class="fa fa-calendar"></i>
-				{{ page.date | date_to_string }}
-			</span>
-	
-			<h1 class="postTitle">{{ page.title }}</h1><!-- blog post H1 title -->
-			
-			{{ content }}		
-			{% if page.tags %}
-			<div class="blogTags"><!-- keyword tag section -->
-				
-				<i class="fa fa-tags"></i>
-					{% for tag in page.tags limit: 3 %}
-						<a href="/tags/{{tag | replace:' ', '-' | downcase }}">{{ tag }}{% if forloop.last == false %}, {%endif %}</a> 
-					{% endfor %}
-			</div>
-			{% endif %}
-		</article><!-- end post content -->
-		<div id="disqus_thread"></div>
-		<script type="text/javascript">
-			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-			var disqus_shortname = 'danielnolan'; // required: replace example with your forum shortname
+<div class="well"><!-- grey blog post area -->
 
-			/* * * DON'T EDIT BELOW THIS LINE * * */
-			(function() {
-				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-			})();
-		</script>
-		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  <article class="blogPost"><!-- blog post content in here -->
+    <span class="dateTag"><!-- blog post date tag wrapper -->
+      <i class="fa fa-calendar"></i>
+      {{ page.date | date: "%-d %B %Y" }}
+    </span>
+
+    <h1 class="postTitle">{{ page.title }}</h1><!-- blog post H1 title -->
+
+    {{ content }}
+    {% if page.tags %}
+    <div class="blogTags"><!-- keyword tag section -->
+
+      <i class="fa fa-tags"></i>
+      {% for tag in page.tags limit: 4 %}
+      <a href="/tags/{{tag | replace:' ', '-' | downcase }}">{{ tag }}{% if forloop.last == false %}, {%endif %}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </article><!-- end post content -->
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'danielnolan'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </div><!-- end grey content area -->

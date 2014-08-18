@@ -2,8 +2,8 @@
 layout: post
 title: Using Mechanical Keyboards Saved My Career
 
-categories: 
-- Programming
+categories:
+- Tools Of The Trade
 
 tags:
 - Daniel

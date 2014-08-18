@@ -5,5 +5,3 @@ The following directories, pages, and their contents are Copyright &copy; Daniel
 
 * _posts/
 * images/
-* work.html
-* contact.html

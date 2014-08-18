@@ -2,14 +2,15 @@
 layout: post
 title: The Ultimate Workflow iTerm2, Tmux, Tmuxinator, and Vim
 
-categories: 
-- Programming
-- Workflow
+categories:
+- Tools Of The Trade
 
 tags:
 - Tmux
 - Tmuxinator
 - Programming
+- Vim
+- Workflow
 
 description: Post about my amazing workflow
 ---

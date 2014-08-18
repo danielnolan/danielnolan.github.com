@@ -5,7 +5,7 @@ author: Daniel Nolan
 
 permalink:	/:year/:month/:day/:title/
 safe: false
-pygments: true
+highlighter: pygments
 lsi: false
 exclude: [Readme.markdown, .ruby-version, vendor, .ruby-gemset, Gemfile, Gemfile.lock]
 paginate: 4
