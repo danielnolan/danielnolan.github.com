@@ -21,7 +21,7 @@ So here is what I came up with.
 First I add a config called customSort to my column configs. The customSort will be the value that is sent to
 the server when clicking the grid column header. 
 
-{% highlight javascript %}
+{% highlight javascript linenos%}
 
 var gridColumns = [{
     text: 'Id',
@@ -68,7 +68,7 @@ Then in the store for my grid I add some code to the before load listener to che
 for a customSort param on each column. If the param is found the store will send
 the customSort value to the server, if no customSort value is found it will send the column header name as normal.
 
-{% highlight javascript %}
+{% highlight javascript linenos%}
 
 listeners: {
   beforeload: function (store, options) {

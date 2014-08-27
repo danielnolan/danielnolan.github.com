@@ -39,7 +39,7 @@ If you need to adjust the Capybara default wait time because of intermittently
 failing Capybara feature specs, just add this to your spec_helper.rb or
 rails_helper.rb if you are using Rspec 3.
 
-{% highlight ruby %}
+{% highlight ruby linenos%}
 if ENV['TDDIUM'] #only set this config on Solano CI
   #set longer capybara wait time to prevent failed builds on SolanoCI
   Capybara.default_wait_time = 8

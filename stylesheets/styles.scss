@@ -1,0 +1,33 @@
+---
+---
+
+@import 'syntax';
+
+body {
+  position: relative;
+  padding-top: 60px;
+  font-size: 12px;
+}
+
+pre {
+  background-color:#073642;
+  font-size: 8px;
+}
+
+h1 { font-size: 20px; }
+h3 { font-size: 15px; }
+
+@media screen and ( max-width: 700px ) {
+  h1 {
+     font-size: 20px;
+  }
+}
+
+@media screen and ( min-width: 700px ) {
+  body { font-size: 14px }
+  h3 { font-size: 15px }
+  pre { font-size: 12px }
+  h1 {
+     font-size: 25px;
+  }
+}

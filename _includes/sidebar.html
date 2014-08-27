@@ -1,0 +1,62 @@
+<div class"sideBoxContent">
+  <p>
+  <img src="http://www.gravatar.com/avatar/1894aa33479313caba1a8d8a0bc13f3b.png" alt="..." class="img-circle">
+  </p>
+  <p>
+  <span class="fa-stack fa-lg">
+    <a href="http://github.com/danielnolan" title="Gihub">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-github-square fa-stack-1x fa-inverse"></i>
+    </a>
+  </span>
+  <span class="fa-stack fa-lg" title="Bitbucket">
+    <a href="http://bitbucket.com/danielnolan">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-bitbucket-square fa-stack-1x fa-inverse"></i>
+    </a>
+  </span>
+  <span class="fa-stack fa-lg">
+    <a href="http://twitter.com/danielnolan" title="Twitter">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+    </a>
+  </span>
+  <span class="fa-stack fa-lg">
+    <a href="http://stackexchange.com/users/91532/daniel-n" title="Stack Exchange">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-stack-overflow fa-stack-1x fa-inverse"></i>
+    </a>
+  </span>
+  <span class="fa-stack fa-lg">
+    <a href="http://linkedin.com/in/danielnolan80" title="Linkedin">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+    </a>
+  </span>
+  </p>
+  <h3>
+    A Little About Me...
+  </h3>
+  <p>
+  I&#39;m a web application developer, living in Florida.
+  Originally from GA, I was born a Falcons and Braves fan.
+  Vim is my editor of choice. I&lt;3 my beautiful girlfriend Laurie.
+  When I am not in front of a computer my new hobby is gardening, I find it relaxing.
+  I am a dog lover, I have a black and tan min pin named Jet.
+  I also like to try different craft beers, I prefer IPAs, the hoppier the better!
+  I like to take pictures too, although I don&#39;t have as much time to dedicate to it as I wish I did.
+  </p>
+</div>
+<div class="sideBoxContent hidden-sm hidden-xs">
+  <h3>Categories</h3>
+  <ul class="nav nav-pills nav-stacked">
+    {% for category in site.iterable.categories %}
+    <li><a href="/categories/{{category.name | replace:' ', '-' | downcase}}">{{ category.name | upcase }}</a></li>
+    {% endfor %}
+  </ul>
+  <h3>Archive</h3>
+  <ul class="nav nav-pills nav-stacked">
+    <li><a href="/archive.html">POSTS BY YEAR</a></li>
+  </ul>
+</div>
+

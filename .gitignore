@@ -9,3 +9,4 @@ _site/*
 .project
 .DS_Store
 *.sublime*
+.sass-cache/

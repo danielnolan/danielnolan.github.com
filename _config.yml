@@ -3,21 +3,22 @@ url:  http://danielnolan.com
 title:  danielnolandotcom
 author: Daniel Nolan
 
-permalink:	/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
+excerpt_link:  "Read More&hellip;"
+paginate: 4
 safe: false
 highlighter: pygments
 lsi: false
-exclude: [Readme.markdown, .ruby-version, vendor, .ruby-gemset, Gemfile, Gemfile.lock]
-paginate: 4
-
-excerpt_link:  "Read More&hellip;"
+exclude: [Readme.markdown, .ruby-version, vendor, .ruby-gemset, Gemfile, Gemfile.lock, Rakefile, bin]
+sass:
+    sass_dir: _sass
 
 #plugins
 index_pages:
   category:
     do_related: false
     title_prefix: 'Category: '
-  
+
   tag:
     do_related: false
-    title_prefix: 'Tag: '    
+    title_prefix: 'Tag: '

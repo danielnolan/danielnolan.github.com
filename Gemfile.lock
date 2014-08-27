@@ -40,5 +40,6 @@ PLATFORMS
 DEPENDENCIES
   inflection
   jekyll
+  kramdown
   rake
   redcarpet

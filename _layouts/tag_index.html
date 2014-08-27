@@ -3,24 +3,24 @@ layout: secondary
 ---
 
 <div class="pageheader">
-	<h1>Tag:&nbsp;{{page.tag}}</h1>
+  <h1>Tag:&nbsp;{{page.tag}}</h1>
 </div>
 {% for post in site.tags[page.tag] %}
-<div class="well">
-  <article class="blogPost">
-	<i class="fa fa-calendar"></i>
-    <span class="dateTag">{{ post.date | date_to_string }}</span>
-	<a href="{{post.url}}">	
-		<h1 class="postTitle">{{ post.title }}</h1><!-- blog post H1 title -->
-	</a>
-    <p>{{ post.description }}</p>
-	<p><a class="more-link" href="{{ post.url }}">{{ site.excerpt_link }}</a></p>
-    <div class="blogTags"><!-- keyword tag section -->      
-	  <i class="fa fa-tags"></i>
-        {% for tag in post.tags limit: 3 %}
-          <a href="/tags/{{tag | replace:' ', '-' | downcase }}">{{ tag }}{% if forloop.last == false %}, {%endif %}</a> 
+  <div class="well">
+    <article class="blogPost">
+      <i class="fa fa-calendar"></i>
+      <span class="dateTag">{{ post.date | date_to_string }}</span>
+      <a href="{{post.url}}">	
+        <h1 class="postTitle">{{ post.title }}</h1><!-- blog post H1 title -->
+      </a>
+      <p>{{ post.description }}</p>
+      <p><a class="more-link" href="{{ post.url }}">{{ site.excerpt_link }}</a></p>
+      <div class="blogTags"><!-- keyword tag section -->      
+        <i class="fa fa-tags"></i>
+        {% for tag in post.tags limit: 10 %}
+          <a href="/tags/{{tag | replace:' ', '-' | downcase }}">{{ tag }}{% if forloop.last == false %}, {%endif %}</a>
         {% endfor %}
-    </div>
-  </article> 
-</div>
+      </div>
+    </article>
+  </div>
 {% endfor %}
