@@ -1,6 +1,9 @@
 language: ruby
 rvm:
-  - "2.1.2"
-script: "bundle exec rake publish"
+- 2.1.2
+script: "./_scripts/travis_build.sh"
 branches:
   only: source
+env:
+  global:
+    secure: WuigH6UFu8Kuz6DEtw0eamPySBhJVCDK/aFGuVyrpB6e7eNn3LAROs6+n1fs4j0BHI8PB3zuHptRzLczVYrNnEMf7+9OQK+QIdRzrXJiwoLpca5faR+ezS+8kJBfgVaKCfQa1hciSIy8Yl/z1NS4Mz0Ympt9wpQ6Y5HmPPWtuco=
