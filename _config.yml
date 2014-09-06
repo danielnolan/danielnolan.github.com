@@ -10,7 +10,7 @@ paginate: 4
 safe: false
 highlighter: pygments
 lsi: false
-exclude: [Readme.markdown, .ruby-version, vendor, .ruby-gemset, Gemfile, Gemfile.lock, Rakefile, bin]
+exclude: [Readme.md, .ruby-version, vendor, .ruby-gemset, Gemfile, Gemfile.lock, Rakefile, bin]
 sass:
     sass_dir: _sass
 
