@@ -1,6 +1,6 @@
 language: ruby
 rvm:
   - "2.1.2"
-script: "rake publish"
+script: "bundle exec rake publish"
 branches:
   only: source
