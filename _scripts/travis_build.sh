@@ -2,15 +2,16 @@
 
 bundle exec jekyll build
 
-
 mkdir tmp
-cp -r _site tmp
+cp -r _site/. tmp
 cd tmp
+
 git init
 git config --global user.email "travis@travis-ci.org"
 git config --global user.name "travis-ci"
 git config credential.helper "store --file=.git/credentials"
 echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+
 git add -f .
 git add tags -f
 git remote add origin https://github.com/danielnolan/danielnolan.github.com.git
