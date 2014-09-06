@@ -1,6 +1,7 @@
 #!/bin/bash
 
 bundle exec jekyll build
+bundle exec htmlproof ./_site --href_ignore '#'
 
 mkdir tmp
 cp -r _site/. tmp
