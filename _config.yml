@@ -1,6 +1,7 @@
 # Main
 url:  http://danielnolan.com
 title:  danielnolandotcom
+description: Code and Stuff
 author: Daniel Nolan
 
 permalink: /:year/:month/:day/:title/
