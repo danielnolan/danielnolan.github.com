@@ -12,7 +12,8 @@ highlighter: pygments
 lsi: false
 exclude: [Readme.md, .ruby-version, vendor, .ruby-gemset, Gemfile, Gemfile.lock, Rakefile, bin]
 sass:
-    sass_dir: _sass
+  sass_dir: _sass
+  style: :compressed
 
 #plugins
 index_pages:

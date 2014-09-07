@@ -4,21 +4,21 @@ layout: secondary
 
 <div class="well"><!-- grey blog post area -->
 
-  <article class="blogPost"><!-- blog post content in here -->
-    <span class="dateTag"><!-- blog post date tag wrapper -->
+  <article class="blog-post"><!-- blog post content in here -->
+    <span class="date-tag"><!-- blog post date tag wrapper -->
       <i class="fa fa-calendar"></i>
       {{ page.date | date_to_long_string }}
     </span>
 
-    <h1 class="postTitle">{{ page.title }}</h1><!-- blog post H1 title -->
+    <h1 class="post-title">{{ page.title }}</h1><!-- blog post H1 title -->
 
     {{ content }}
     {% if page.tags %}
-    <div class="blogTags"><!-- keyword tag section -->
+    <div class="blog-tags"><!-- keyword tag section -->
 
       <i class="fa fa-tags"></i>
       {% for tag in page.tags limit: 10 %}
-      <a href="/tags/{{tag | replace:' ', '-' | downcase }}">{{ tag }}{% if forloop.last == false %}, {%endif %}</a>
+      <a href="/tags/{{ tag | replace:' ', '-' | downcase }}">{{ tag }}{% if forloop.last == false %}, {%endif %}</a>
       {% endfor %}
     </div>
     {% endif %}

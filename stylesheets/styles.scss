@@ -1,6 +1,7 @@
 ---
 ---
 
+@import 'posts';
 @import 'syntax';
 
 body {
@@ -30,8 +31,4 @@ h3 { font-size: 15px; }
   h1 {
      font-size: 25px;
   }
-}
-
-.blogPost img {
-  width: 100%;
 }
