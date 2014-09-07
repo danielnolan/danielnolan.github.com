@@ -87,6 +87,4 @@ DEPENDENCIES
   html-proofer
   inflection
   jekyll (~> 2.3.0)
-  kramdown
   rake
-  redcarpet
