@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-bundle exec jekyll build
+bundle exec JEKYLL_ENV=production jekyll build
 bundle exec htmlproof ./_site --href_ignore '#'
 
 mkdir tmp
