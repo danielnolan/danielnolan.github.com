@@ -7,5 +7,6 @@ branches:
   only: source
 env:
   global:
+    - JEKYLL_ENV: production
     - secure: WuigH6UFu8Kuz6DEtw0eamPySBhJVCDK/aFGuVyrpB6e7eNn3LAROs6+n1fs4j0BHI8PB3zuHptRzLczVYrNnEMf7+9OQK+QIdRzrXJiwoLpca5faR+ezS+8kJBfgVaKCfQa1hciSIy8Yl/z1NS4Mz0Ympt9wpQ6Y5HmPPWtuco=
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
