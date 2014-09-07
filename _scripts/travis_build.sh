@@ -1,7 +1,6 @@
 #!/bin/bash
 set -e
 
-JEKYLL_ENV=production
 bundle exec jekyll build
 bundle exec htmlproof ./_site --href_ignore '#'
 

@@ -1,6 +1,3 @@
-require 'dotenv'
-Dotenv.load
-
 class Jekyll::Site
   attr_accessor :env
 end
