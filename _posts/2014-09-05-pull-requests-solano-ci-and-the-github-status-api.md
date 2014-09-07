@@ -29,4 +29,4 @@ Solano will post to Github&#39;s API, if there is a pull request for that branch
 the build status will appear in the pull request with a link to the full
 build report on Solano.
 
-<img src="/assets/github-status-api.png" alt="Github Status API Screenshot" class="img-rounded">
+<img src="{{ site.url }}/assets/github-status-api.png" alt="Github Status API Screenshot" class="img-rounded">
