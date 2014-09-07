@@ -12,6 +12,9 @@ GEM
     coffee-script-source (1.8.0)
     colorator (0.1)
     colored (1.2)
+    dotenv (0.11.1)
+      dotenv-deployment (~> 0.0.2)
+    dotenv-deployment (0.0.2)
     ethon (0.7.1)
       ffi (>= 1.3.0)
     execjs (2.2.1)
@@ -84,6 +87,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dotenv
   html-proofer
   inflection
   jekyll (~> 2.3.0)

@@ -14,6 +14,8 @@ exclude: [Readme.md, .ruby-version, vendor, .ruby-gemset, Gemfile, Gemfile.lock,
 sass:
   sass_dir: _sass
   style: :compressed
+kramdown:
+  input: GFM
 
 #plugins
 index_pages:
