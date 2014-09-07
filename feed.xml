@@ -1,5 +1,5 @@
 ---
-layout: xml
+layout: rss
 ---
 <channel>
   <title>{{ site.title | xml_escape }}</title>
