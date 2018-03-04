@@ -3,8 +3,6 @@ cache: bundler
 rvm:
   - 2.4.2
 script: "bundle exec rake test"
-branches:
-  only: source
 env:
   global:
     - JEKYLL_ENV: production
@@ -15,4 +13,7 @@ deploy:
   github-token: GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
   keep-history: true
   on:
-    branch: master
+    repo: danielnolan/danielnoalan.github.com
+    branches:
+      only:
+        - source
