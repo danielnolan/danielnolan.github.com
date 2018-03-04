@@ -1,8 +1,7 @@
 #!/bin/bash
 set -e
 
-bundle exec jekyll build
-htmlproofer --assume-extension ./_site
+bundle exec rake test
 
 cd _site
 
