@@ -2,7 +2,7 @@
 layout: post
 title: Custom sort names EXTJS 4 grids
 
-categories: 
+categories:
 - Javascript
 
 tags:
@@ -10,7 +10,7 @@ tags:
 - Sencha
 - EXTJS
 
-description: This is a quick how to on adding custom column names to be sent to the server using EXTJS grids with 
+description: This is a quick how to on adding custom column names to be sent to the server using EXTJS grids with
              server side (remote) sorting.
 ---
 I build grids all the time in EXTJS 4 and they are usually dealing with a ton of data so server side sorting is a must.
@@ -19,7 +19,7 @@ but most of the time my column header names differ from the names I need to send
 So here is what I came up with.
 
 First I add a config called customSort to my column configs. The customSort will be the value that is sent to
-the server when clicking the grid column header. 
+the server when clicking the grid column header.
 
 {% highlight javascript linenos%}
 
@@ -76,9 +76,9 @@ listeners: {
       var oldSortParam = store.sorters.items[0].property;
       for(var i=0; i < gridColumns.length; i++) {
         var currentCol = gridColumns[i];
-        if(currentCol.sortable && currentCol.customSort && 
+        if(currentCol.sortable && currentCol.customSort &&
            currentCol.dataIndex == oldSortParam) {
-             store.sorters.items[0].property = 
+             store.sorters.items[0].property =
              currentCol.customSort;
              break;
         }

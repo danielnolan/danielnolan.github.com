@@ -3,8 +3,8 @@ layout: post
 title: Asynchronously Linting Ruby and Haml in Vim8 or NeoVim
 
 categories:
-- Tools Of The Trade
 - Vim
+- Ruby
 
 tags:
 - Vim

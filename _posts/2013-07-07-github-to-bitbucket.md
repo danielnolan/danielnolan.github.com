@@ -2,9 +2,8 @@
 layout: post
 title: Switched My Private Repos From Github to Bitbucket
 
-categories: 
+categories:
 - Git
-- Tools Of The Trade
 
 tags:
 - Git

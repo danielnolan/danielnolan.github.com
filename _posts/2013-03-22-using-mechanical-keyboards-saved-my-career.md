@@ -3,13 +3,14 @@ layout: post
 title: Using Mechanical Keyboards Saved My Career
 
 categories:
-- Tools Of The Trade
 - Hardware
 
 tags:
-- Daniel
 - Programming
 - Keyboards
+- Mechanical Keyboards
+- Cherry Mx
+- Keebs
 
 description: Post about mechanical keyboards and how they saved my career
 ---

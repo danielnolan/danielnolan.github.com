@@ -3,7 +3,8 @@ layout: post
 title: The Ultimate Workflow iTerm2, Tmux, Tmuxinator, and Vim
 
 categories:
-- Tools Of The Trade
+- Vim
+- Tmux
 
 tags:
 - Tmux
