@@ -11,6 +11,7 @@ env:
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 deploy:
   provider: pages
+  fqdn: danielnolan.com
   skip-cleanup: true
   github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
   keep-history: true

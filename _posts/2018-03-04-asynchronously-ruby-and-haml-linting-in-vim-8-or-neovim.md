@@ -3,19 +3,19 @@ layout: post
 title: Asynchronously Linting Ruby and Haml in Vim8 or NeoVim
 
 categories:
+- Tools Of The Trade
 - Vim
-- Ruby
-- Style
 
 tags:
 - Vim
 - Vim8
 - NeoVim
 - ALE
-- Workflow
-- Linting
 - Rubocop
 - Haml-Lint
+- Workflow
+- Style
+- Linting
 
 description: Asynchronous Ruby and Haml linting in Vim 8 or NeoVim
 

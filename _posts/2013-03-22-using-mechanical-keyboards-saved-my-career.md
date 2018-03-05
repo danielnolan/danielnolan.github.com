@@ -4,6 +4,7 @@ title: Using Mechanical Keyboards Saved My Career
 
 categories:
 - Tools Of The Trade
+- Hardware
 
 tags:
 - Daniel
