@@ -13,6 +13,7 @@ tags:
 - Rails
 - Interview
 - Sandi Metz
+- Clean Code
 
 description: Derek get's my take on what it was like to take over a Thoughtbot project.
 
