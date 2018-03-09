@@ -15,7 +15,7 @@ tags:
 - Sandi Metz
 - Clean Code
 
-description: Derek get's my take on what it was like to take over a Thoughtbot project.
+description: Derek asks for my take on what it was like to take over a Thoughtbot project.
 
 ---
 In 2014 I landed a remote gig with a Boston based company called the T1D Exchange.
