@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+  <title>danielnolandotcom</title>
+  <description>Code and Stuff</description>
+  <link>http://danielnolan.com</link>
+  <atom:link href="http://danielnolan.com/feed.xml" rel="self" type="application/rss+xml" />
+  
+  <item>
+    <title>Asynchronously Linting Ruby and Haml in Vim8 or NeoVim</title>
+    <description>&lt;p&gt;In the past I have used Syntastic in Vim for linting code while
+editing. Syntastic was good, but was too slow for large projects and often felt
+like it was slowing me down.ALE (Asynchronous Lint Engine) is a plugin for Vim8
+and NeoVim that makes use of the new Asynchronous features introduced in Vim8 to
+allow linting as you type.
+Rather than linting a file when opening or saving like Syntastic, ALE will run
+the linter in the background asynchronously as you type. Not only is the
+feedback loop much tighter, it doesn’t bog Vim down while your editing.
+I have used Rubocop with Vim for linting Ruby for many years now, but never used
+it for view files. I just started with a new organization and they use Haml for
+views in the project that I am working on, so I was curious if there was a linter
+for Haml. Sure enough I found Haml-Lint and it ties in with Rubocop to bring
+the Ruby linting power of Rubocop to your Haml views. Both Rubocop and Haml-Lint
+will both work with zero configuration if you have ALE installed in Vim.
+Install instructions can be found in the links below, but it’s really as simple
+as installing both gems and adding the ALE plugin to Vim with your favorite
+plugin manager.&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;Links:&lt;/dt&gt;
+  &lt;dd&gt;&lt;a href=&quot;https://github.com/w0rp/ale&quot;&gt;ALE&lt;/a&gt;&lt;/dd&gt;
+  &lt;dd&gt;&lt;a href=&quot;https://github.com/bbatsov/rubocop&quot;&gt;Rubocop&lt;/a&gt;&lt;/dd&gt;
+  &lt;dd&gt;&lt;a href=&quot;https://github.com/brigade/haml-lint&quot;&gt;Haml-Lint&lt;/a&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+</description>
+    <pubDate>Sun, 04 Mar 2018 00:00:00 -0500</pubDate>
+    <link>http://danielnolan.com/2018/03/04/asynchronously-ruby-and-haml-linting-in-vim-8-or-neovim/</link>
+    <guid isPermaLink="true">http://danielnolan.com/2018/03/04/asynchronously-ruby-and-haml-linting-in-vim-8-or-neovim/</guid>
+  </item>
+  
+  <item>
+    <title>That Time Derek From Thoughtbot Interviewed Me</title>
+    <description>&lt;p&gt;In 2014 I landed a remote gig with a Boston based company called the T1D Exchange.
+Hired as the lead developer on their myglu web app, I was extremely stoked when
+I found out the MVP for the project I was taking over was built by Thougtbot in Boston! 
+I had the please of catching up two of the original Thoughtbot Devs 
+Derek Prior and Sean Griffin at Rails Conf in Atlanta.
+We chatted for a bit, they both agreed it was one of their favorite projects.
+They decided to follow Sandi Metz’s rules to a t on this project.
+After taking over the project my boss insisted that I follow the conventions
+that were set forth on the project. I have never worked in a cleaner,
+more well thought out Rails codebase, ever. Here is a link to the interview.
+&lt;a href=&quot;https://robots.thoughtbot.com/a-client-project-two-years-later&quot;&gt;https://robots.thoughtbot.com/a-client-project-two-years-later&lt;/a&gt;&lt;/p&gt;
+</description>
+    <pubDate>Wed, 04 Nov 2015 00:00:00 -0500</pubDate>
+    <link>http://danielnolan.com/2015/11/04/that-time-derek-from-thougtbot-interviewed-me/</link>
+    <guid isPermaLink="true">http://danielnolan.com/2015/11/04/that-time-derek-from-thougtbot-interviewed-me/</guid>
+  </item>
+  
+  <item>
+    <title>Pull Requests, Solano CI, and the Github Status API.</title>
+    <description>&lt;p&gt;We use the Github pull request workflow at work, and we love it. As soon as
+input is needed on the feature that is being worked on, we push up the feature
+branch to Github and open a pull request. Github pull requests are great on
+their own, but, what if you knew the status of the build from your continuous
+integration server while reviewing the pull request? With the Solano CI &amp;amp; Github
+Status API integration you can do just that. No coding is necessary to enable
+this, simply enable the Github Commit Status permissions from within Solano and boom!
+Each time you push commits to a branch on Github a build is kicked off on Solano.
+Solano will post to Github's API, if there is a pull request for that branch
+the build status will appear in the pull request with a link to the full
+build report on Solano.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://danielnolan.com/assets/github-status-api.png&quot; alt=&quot;Github Status API Screenshot&quot; class=&quot;img-rounded&quot; /&gt;&lt;/p&gt;
+</description>
+    <pubDate>Fri, 05 Sep 2014 00:00:00 -0400</pubDate>
+    <link>http://danielnolan.com/2014/09/05/pull-requests-solano-ci-and-the-github-status-api/</link>
+    <guid isPermaLink="true">http://danielnolan.com/2014/09/05/pull-requests-solano-ci-and-the-github-status-api/</guid>
+  </item>
+  
+  <item>
+    <title>Solano CI Intermittent Failed Builds With Capybara</title>
+    <description>&lt;p&gt;My company has been using Solano CI (formerly Tddium) for Continuous Integration
+and Rspec/Capybara for testing our Rails apps. We have Solano CI linked to Github, whenever
+we push a branch or a new commit to a branch, it kicks off a build on Solano CI and runs
+all of the Rspec/Capybara specs. When I first started on this project, we were
+always having problems with builds intermittently failing. However, these specs would
+pass every time when running Rspec locally. A CI server is not a useful tool if it's
+not reliable. I began to look into what was causing these intermittently failing builds
+and I noticed that all of the failures were coming from feature specs. Since feature specs are 
+handled by Capybara, I figured the failures had something to do with the way Capybara
+was running on Solano CI.
+After some digging and a conversation with Solano support, we were able to get the
+intermittently failing builds to stop. The tests are run in parallel on Solano CI for speed,
+sometimes the 2 second Capybara default wait time was not long enough. Most of
+the time the builds would pass, but sometimes the content or element wasn't on the page within
+the 2 seconds time causing the feature spec to fail. We changed the value from 2 seconds
+to 8 seconds and kicked off a few builds. Every build that passes locally is now passing
+without any issues on Solano CI. In the code example below the Capybara default wait
+time is only adjusted if the ENV is set to TDDIUM.
+If you need to adjust the Capybara default wait time because of intermittently
+failing Capybara feature specs, just add this to your spec_helper.rb or
+rails_helper.rb if you are using Rspec 3.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ENV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'TDDIUM'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;#only set this config on Solano CI&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;#set longer capybara wait time to prevent failed builds on SolanoCI&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Capybara&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;default_wait_time&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+    <pubDate>Sun, 17 Aug 2014 00:00:00 -0400</pubDate>
+    <link>http://danielnolan.com/2014/08/17/solano-ci-intermittent-failed-builds-with-capybara/</link>
+    <guid isPermaLink="true">http://danielnolan.com/2014/08/17/solano-ci-intermittent-failed-builds-with-capybara/</guid>
+  </item>
+  
+  <item>
+    <title>The Ultimate Workflow iTerm2, Tmux, Tmuxinator, and Vim</title>
+    <description>&lt;p&gt;Just wanted to write a quick post about my workflow.
+I have been using Tmux, iTerm2, and Vim for a good while now and I love it.
+Since switching from writing PHP to writing Ruby full time, I have been
+working on upgrading my tools so they are better suited for Ruby and for working on multiple projects.
+Tmux is great for multiple projects cause you can setup different sessions for working on different projects.
+You can attach and detach from these sessions quickly which makes switching between projects on
+the fly a breeze. Enter &lt;a href=&quot;https://github.com/aziz/tmuxinator&quot;&gt;Tmuxinator&lt;/a&gt;. Tmuxinator makes setting up
+complex tmux sessions a snap. Tmuxinator allows you to have a yaml configuration file for each project.
+Once you have your configuration file setup you can just run mux project-name start and it will setup your
+Tmux session as for you based on your configuration file. When I have some more time I will post about
+actually setting up and configuring Tmuxinator.&lt;/p&gt;
+</description>
+    <pubDate>Sun, 11 Aug 2013 00:00:00 -0400</pubDate>
+    <link>http://danielnolan.com/2013/08/11/my-amazing-workflow/</link>
+    <guid isPermaLink="true">http://danielnolan.com/2013/08/11/my-amazing-workflow/</guid>
+  </item>
+  
+  <item>
+    <title>Switched My Private Repos From Github to Bitbucket</title>
+    <description>&lt;p&gt;I recently started with a new company writing Ruby.
+The company I work for now uses Bitbucket because they allow unlimited private repos.
+This makes absolute sense for my personal projects. I have all kinds of projects 
+I don't want to share with the public that I would love to have backed up to a remote git host.
+Bitbucket allowing 5 users for free and unlimited repos had me sold. I moved all
+of my private repos over to Bitbucket and downgraded my Github account to a free
+account. I mean Github is a great service but paying for private repos for projects
+I have not worked on in forever just doesn't make sense to me.&lt;/p&gt;
+</description>
+    <pubDate>Sun, 07 Jul 2013 00:00:00 -0400</pubDate>
+    <link>http://danielnolan.com/2013/07/07/github-to-bitbucket/</link>
+    <guid isPermaLink="true">http://danielnolan.com/2013/07/07/github-to-bitbucket/</guid>
+  </item>
+  
+  <item>
+    <title>Using Mechanical Keyboards Saved My Career</title>
+    <description>&lt;p&gt;I work full time for a company during the day writing PHP.
+At night I am usually hacking on something in Ruby.
+As most of you know spending so much time on the computer is bad for you.
+We got Macbook Pros at my day job last year, within months of using the flat keybord
+day and night my hands and wrists hurt so bad I thought my career was going to be over.
+After trying many things including wrist braces, wrist rests, and exercises I read somewhere about
+mechanical switch keyboards and how much better they are for typing for long periods
+of time. I ordered one from NewEgg and started using it for all my typing. That combined 
+with some wrist and hand exercises and here I am a year later still programming 16 or 17
+hours a day sometimes with no pain what so ever. Everyone is like how can you spend $100+
+dollars on a keyboard? I say when it comes to your health and career longevity, $100 is
+not even a concern. I now use a Mitas keyboard at home and a CoolerMaster at work. I will never
+use a cheap or flat key keyboard ever again.&lt;/p&gt;
+</description>
+    <pubDate>Fri, 22 Mar 2013 00:00:00 -0400</pubDate>
+    <link>http://danielnolan.com/2013/03/22/using-mechanical-keyboards-saved-my-career/</link>
+    <guid isPermaLink="true">http://danielnolan.com/2013/03/22/using-mechanical-keyboards-saved-my-career/</guid>
+  </item>
+  
+  <item>
+    <title>Custom sort names EXTJS 4 grids</title>
+    <description>&lt;p&gt;I build grids all the time in EXTJS 4 and they are usually dealing with a ton of data so server side sorting is a must.
+EXTJS sends the header name of the grid column and and the sort direction to the server by default. That's all fine and dandy
+but most of the time my column header names differ from the names I need to send to the server for proper sorting.
+So here is what I came up with.&lt;/p&gt;
+
+&lt;p&gt;First I add a config called customSort to my column configs. The customSort will be the value that is sent to
+the server when clicking the grid column header.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gridColumns&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;dataIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;75&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Queue Cat'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;dataIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'queue_cat'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;customSort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'DocumentQueueCategory.name'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Queued to Customer'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;dataIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'queued_to_customer'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;flex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;customSort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'User.lastname'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Locked By'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;dataIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'locked_by'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;customSort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'LockedBy.lastname'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Last Act. Admin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;dataIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'last_activity_admin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;customSort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'LastActAdmin.lastname'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Created'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;dataIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'created'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;110&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'m/d/y g:i a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;xtype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'datecolumn'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Modified'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;dataIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'modified'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;110&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'m/d/y g:i a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;xtype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'datecolumn'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}];&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Then in the store for my grid I add some code to the before load listener to check
+for a customSort param on each column. If the param is found the store will send
+the customSort value to the server, if no customSort value is found it will send the column header name as normal.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;nx&quot;&gt;listeners&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;beforeload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sorters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]){&lt;/span&gt;
+      &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;oldSortParam&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sorters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;property&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gridColumns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;currentCol&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gridColumns&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;currentCol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sortable&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;currentCol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;customSort&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;
+           &lt;span class=&quot;nx&quot;&gt;currentCol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dataIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;oldSortParam&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+             &lt;span class=&quot;nx&quot;&gt;store&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;sorters&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;property&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+             &lt;span class=&quot;nx&quot;&gt;currentCol&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;customSort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+             &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+    <pubDate>Wed, 07 Mar 2012 00:00:00 -0500</pubDate>
+    <link>http://danielnolan.com/2012/03/07/custom-column-sort-names-for-extjs4/</link>
+    <guid isPermaLink="true">http://danielnolan.com/2012/03/07/custom-column-sort-names-for-extjs4/</guid>
+  </item>
+  
+</channel>
+
+</rss>
