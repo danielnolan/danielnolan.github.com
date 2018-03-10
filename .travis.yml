@@ -12,9 +12,7 @@ env:
 deploy:
   provider: pages
   fqdn: danielnolan.com
-  skip-cleanup: true
   github-token: $GITHUB_TOKEN  # Set in travis-ci.org dashboard, marked secure
-  keep-history: true
   target-branch: master
   local-dir: _site
   on:
