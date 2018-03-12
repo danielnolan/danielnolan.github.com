@@ -33,7 +33,7 @@ plugin manager.&lt;/p&gt;
   &lt;dd&gt;&lt;a href=&quot;https://github.com/brigade/haml-lint&quot;&gt;Haml-Lint&lt;/a&gt;&lt;/dd&gt;
 &lt;/dl&gt;
 </description>
-    <pubDate>Sun, 04 Mar 2018 00:00:00 -0500</pubDate>
+    <pubDate>Sun, 04 Mar 2018 00:00:00 +0000</pubDate>
     <link>http://danielnolan.com/2018/03/04/asynchronously-ruby-and-haml-linting-in-vim-8-or-neovim/</link>
     <guid isPermaLink="true">http://danielnolan.com/2018/03/04/asynchronously-ruby-and-haml-linting-in-vim-8-or-neovim/</guid>
   </item>
@@ -52,7 +52,7 @@ that were set forth on the project. I have never worked in a cleaner,
 more well thought out Rails codebase, ever. Here is a link to the interview.
 &lt;a href=&quot;https://robots.thoughtbot.com/a-client-project-two-years-later&quot;&gt;https://robots.thoughtbot.com/a-client-project-two-years-later&lt;/a&gt;&lt;/p&gt;
 </description>
-    <pubDate>Wed, 04 Nov 2015 00:00:00 -0500</pubDate>
+    <pubDate>Wed, 04 Nov 2015 00:00:00 +0000</pubDate>
     <link>http://danielnolan.com/2015/11/04/that-time-derek-from-thougtbot-interviewed-me/</link>
     <guid isPermaLink="true">http://danielnolan.com/2015/11/04/that-time-derek-from-thougtbot-interviewed-me/</guid>
   </item>
@@ -73,7 +73,7 @@ build report on Solano.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;http://danielnolan.com/assets/github-status-api.png&quot; alt=&quot;Github Status API Screenshot&quot; class=&quot;img-rounded&quot; /&gt;&lt;/p&gt;
 </description>
-    <pubDate>Fri, 05 Sep 2014 00:00:00 -0400</pubDate>
+    <pubDate>Fri, 05 Sep 2014 00:00:00 +0000</pubDate>
     <link>http://danielnolan.com/2014/09/05/pull-requests-solano-ci-and-the-github-status-api/</link>
     <guid isPermaLink="true">http://danielnolan.com/2014/09/05/pull-requests-solano-ci-and-the-github-status-api/</guid>
   </item>
@@ -112,7 +112,7 @@ rails_helper.rb if you are using Rspec 3.&lt;/p&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
-    <pubDate>Sun, 17 Aug 2014 00:00:00 -0400</pubDate>
+    <pubDate>Sun, 17 Aug 2014 00:00:00 +0000</pubDate>
     <link>http://danielnolan.com/2014/08/17/solano-ci-intermittent-failed-builds-with-capybara/</link>
     <guid isPermaLink="true">http://danielnolan.com/2014/08/17/solano-ci-intermittent-failed-builds-with-capybara/</guid>
   </item>
@@ -131,7 +131,7 @@ Once you have your configuration file setup you can just run mux project-name st
 Tmux session as for you based on your configuration file. When I have some more time I will post about
 actually setting up and configuring Tmuxinator.&lt;/p&gt;
 </description>
-    <pubDate>Sun, 11 Aug 2013 00:00:00 -0400</pubDate>
+    <pubDate>Sun, 11 Aug 2013 00:00:00 +0000</pubDate>
     <link>http://danielnolan.com/2013/08/11/my-amazing-workflow/</link>
     <guid isPermaLink="true">http://danielnolan.com/2013/08/11/my-amazing-workflow/</guid>
   </item>
@@ -147,7 +147,7 @@ of my private repos over to Bitbucket and downgraded my Github account to a free
 account. I mean Github is a great service but paying for private repos for projects
 I have not worked on in forever just doesn't make sense to me.&lt;/p&gt;
 </description>
-    <pubDate>Sun, 07 Jul 2013 00:00:00 -0400</pubDate>
+    <pubDate>Sun, 07 Jul 2013 00:00:00 +0000</pubDate>
     <link>http://danielnolan.com/2013/07/07/github-to-bitbucket/</link>
     <guid isPermaLink="true">http://danielnolan.com/2013/07/07/github-to-bitbucket/</guid>
   </item>
@@ -168,7 +168,7 @@ dollars on a keyboard? I say when it comes to your health and career longevity, 
 not even a concern. I now use a Mitas keyboard at home and a CoolerMaster at work. I will never
 use a cheap or flat key keyboard ever again.&lt;/p&gt;
 </description>
-    <pubDate>Fri, 22 Mar 2013 00:00:00 -0400</pubDate>
+    <pubDate>Fri, 22 Mar 2013 00:00:00 +0000</pubDate>
     <link>http://danielnolan.com/2013/03/22/using-mechanical-keyboards-saved-my-career/</link>
     <guid isPermaLink="true">http://danielnolan.com/2013/03/22/using-mechanical-keyboards-saved-my-career/</guid>
   </item>
@@ -296,7 +296,7 @@ the customSort value to the server, if no customSort value is found it will send
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
-    <pubDate>Wed, 07 Mar 2012 00:00:00 -0500</pubDate>
+    <pubDate>Wed, 07 Mar 2012 00:00:00 +0000</pubDate>
     <link>http://danielnolan.com/2012/03/07/custom-column-sort-names-for-extjs4/</link>
     <guid isPermaLink="true">http://danielnolan.com/2012/03/07/custom-column-sort-names-for-extjs4/</guid>
   </item>
