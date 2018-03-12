@@ -10,6 +10,8 @@ env:
     - JEKYLL_ENV: production
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
 deploy:
+  edge:
+    branch: v1.8.47
   provider: pages
   fqdn: danielnolan.com
   skip-cleanup: true
