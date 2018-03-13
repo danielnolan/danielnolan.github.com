@@ -40,6 +40,8 @@
             </a>
             <ul class="dropdown-menu">
               
+                <li><a href="/categories/automation">AUTOMATION</a></li>
+              
                 <li><a href="/categories/git">GIT</a></li>
               
                 <li><a href="/categories/hardware">HARDWARE</a></li>
@@ -113,6 +115,8 @@
   <h3>Categories</h3>
   <ul class="nav nav-pills nav-stacked">
     
+    <li><a href="/categories/automation">AUTOMATION</a></li>
+    
     <li><a href="/categories/git">GIT</a></li>
     
     <li><a href="/categories/hardware">HARDWARE</a></li>
@@ -146,6 +150,65 @@
 
       <span class="date-tag"><!-- blog post date tag wrapper -->
         <i class="fa fa-calendar"></i>
+        13 March 2018
+      </span>
+      <a href="/2018/03/13/deploy-your-blog-to-gh-pages-with-travis-ci-for-free/">
+        <h1 class="postTitle">Deploy Your Blog to Github Pages With Travis CI for Free</h1><!-- blog post H1 title -->
+      </a>
+
+      <p>I’ve been using Jekyll for my blog for quite some time now. I have also had the
+deployment of it automated for just about as long. While doing some revamping
+and adding a new post a few weeks ago, I decided to update my deploy script I
+had written for Travis CI. I was looking through the docs for Travis and low and
+behold they have added the ability to deploy to Github pages with their dpl
+tool. The way I was doing it worked well, but Travis <a href="https://docs.travis-ci.com/user/deployment">dpl</a> makes it dead simple,
+and it can all be configured from a <a href="https://github.com/danielnolan/danielnolan.github.com/blob/source/.travis.yml">.travis.yml</a> file in your project. Now my
+blog publishing work flow goes like this. Write a post in my source branch of my
+<a href="https://github.com/danielnolan/danielnolan.github.com/">danielnolan.github.com</a> repository. Commit the new post and push the source
+branch to Github. Travis is configured to kick of a build when new code is
+committed to the source branch on Github. Travis runs my default rake task for my
+jekyll project which generates the static html for my blog and then lints it using
+htmlproofer. If htmlproofer doesn’t report any errors Travis deploys my
+generated html site to the master branch at <a href="https://github.com/danielnolan/danielnolan.github.com/">danielnolan.github.com</a>. If errors
+are reported by htmlproofer the build fails and my site is not deployed. The best
+part about all of this is I’m able to host my site on Github pages and use
+Travis to deploy it because my blog code is open source, and lives in a public
+repository on Github.</p>
+
+
+
+      <div class="view-comments">
+        <i class="fa fa-comments"></i>
+        <a href="/2018/03/13/deploy-your-blog-to-gh-pages-with-travis-ci-for-free/">View Comments</a>
+      </div>
+
+      
+        <div class="blog-tags"><!-- keyword tag section -->
+          <i class="fa fa-tags"></i>
+          
+            <a href="/tags/automated-deployment">Automated Deployment, </a>
+          
+            <a href="/tags/git">Git, </a>
+          
+            <a href="/tags/travis-ci">Travis CI, </a>
+          
+            <a href="/tags/deployment">Deployment, </a>
+          
+            <a href="/tags/jekyll">Jekyll, </a>
+          
+            <a href="/tags/github-pages">Github Pages</a>
+          
+        </div>
+      
+    </article><!-- end post content -->
+  </div><!-- end grey content area -->
+
+  <div class="well "><!-- grey blog post area -->
+
+    <article class="blog-post"><!-- blog post content in here -->
+
+      <span class="date-tag"><!-- blog post date tag wrapper -->
+        <i class="fa fa-calendar"></i>
         04 March 2018
       </span>
       <a href="/2018/03/04/asynchronously-ruby-and-haml-linting-in-vim-8-or-neovim/">
@@ -154,7 +217,7 @@
 
       <p>In the past I have used Syntastic in Vim for linting code while
 editing. Syntastic was good, but was too slow for large projects and often felt
-like it was slowing me down.ALE (Asynchronous Lint Engine) is a plugin for Vim8
+like it was slowing me down. ALE (Asynchronous Lint Engine) is a plugin for Vim8
 and NeoVim that makes use of the new Asynchronous features introduced in Vim8 to
 allow linting as you type.
 Rather than linting a file when opening or saving like Syntastic, ALE will run
@@ -316,77 +379,6 @@ build report on Solano.</p>
     </article><!-- end post content -->
   </div><!-- end grey content area -->
 
-  <div class="well "><!-- grey blog post area -->
-
-    <article class="blog-post"><!-- blog post content in here -->
-
-      <span class="date-tag"><!-- blog post date tag wrapper -->
-        <i class="fa fa-calendar"></i>
-        17 August 2014
-      </span>
-      <a href="/2014/08/17/solano-ci-intermittent-failed-builds-with-capybara/">
-        <h1 class="postTitle">Solano CI Intermittent Failed Builds With Capybara</h1><!-- blog post H1 title -->
-      </a>
-
-      <p>My company has been using Solano CI (formerly Tddium) for Continuous Integration
-and Rspec/Capybara for testing our Rails apps. We have Solano CI linked to Github, whenever
-we push a branch or a new commit to a branch, it kicks off a build on Solano CI and runs
-all of the Rspec/Capybara specs. When I first started on this project, we were
-always having problems with builds intermittently failing. However, these specs would
-pass every time when running Rspec locally. A CI server is not a useful tool if it's
-not reliable. I began to look into what was causing these intermittently failing builds
-and I noticed that all of the failures were coming from feature specs. Since feature specs are 
-handled by Capybara, I figured the failures had something to do with the way Capybara
-was running on Solano CI.
-After some digging and a conversation with Solano support, we were able to get the
-intermittently failing builds to stop. The tests are run in parallel on Solano CI for speed,
-sometimes the 2 second Capybara default wait time was not long enough. Most of
-the time the builds would pass, but sometimes the content or element wasn't on the page within
-the 2 seconds time causing the feature spec to fail. We changed the value from 2 seconds
-to 8 seconds and kicked off a few builds. Every build that passes locally is now passing
-without any issues on Solano CI. In the code example below the Capybara default wait
-time is only adjusted if the ENV is set to TDDIUM.
-If you need to adjust the Capybara default wait time because of intermittently
-failing Capybara feature specs, just add this to your spec_helper.rb or
-rails_helper.rb if you are using Rspec 3.</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td><td class="code"><pre><span class="k">if</span> <span class="no">ENV</span><span class="p">[</span><span class="s1">'TDDIUM'</span><span class="p">]</span> <span class="c1">#only set this config on Solano CI</span>
-  <span class="c1">#set longer capybara wait time to prevent failed builds on SolanoCI</span>
-  <span class="no">Capybara</span><span class="p">.</span><span class="nf">default_wait_time</span> <span class="o">=</span> <span class="mi">8</span>
-<span class="k">end</span></pre></td></tr></tbody></table></code></pre></figure>
-
-
-
-      <div class="view-comments">
-        <i class="fa fa-comments"></i>
-        <a href="/2014/08/17/solano-ci-intermittent-failed-builds-with-capybara/">View Comments</a>
-      </div>
-
-      
-        <div class="blog-tags"><!-- keyword tag section -->
-          <i class="fa fa-tags"></i>
-          
-            <a href="/tags/continuous-integration">Continuous Integration, </a>
-          
-            <a href="/tags/rspec">Rspec, </a>
-          
-            <a href="/tags/capybara">Capybara, </a>
-          
-            <a href="/tags/rails">Rails, </a>
-          
-            <a href="/tags/solano">Solano, </a>
-          
-            <a href="/tags/testing">Testing</a>
-          
-        </div>
-      
-    </article><!-- end post content -->
-  </div><!-- end grey content area -->
-
 <div>
   <ul class="pagination">
     
@@ -403,6 +395,12 @@ rails_helper.rb if you are using Rspec 3.</p>
       
         <li>
           <a href="/page2">2</a>
+        </li>
+      
+    
+      
+        <li>
+          <a href="/page3">3</a>
         </li>
       
     

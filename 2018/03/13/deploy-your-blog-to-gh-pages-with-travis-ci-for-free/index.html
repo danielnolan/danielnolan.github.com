@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Using Mechanical Keyboards Saved My Career</title>
+    <title>Deploy Your Blog to Github Pages With Travis CI for Free</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
@@ -148,39 +148,47 @@
   <article class="blog-post"><!-- blog post content in here -->
     <span class="date-tag"><!-- blog post date tag wrapper -->
       <i class="fa fa-calendar"></i>
-      22 March 2013
+      13 March 2018
     </span>
 
-    <h1 class="post-title">Using Mechanical Keyboards Saved My Career</h1><!-- blog post H1 title -->
+    <h1 class="post-title">Deploy Your Blog to Github Pages With Travis CI for Free</h1><!-- blog post H1 title -->
 
-    <p>I work full time for a company during the day writing PHP.
-At night I am usually hacking on something in Ruby.
-As most of you know spending so much time on the computer is bad for you.
-We got Macbook Pros at my day job last year, within months of using the flat keybord
-day and night my hands and wrists hurt so bad I thought my career was going to be over.
-After trying many things including wrist braces, wrist rests, and exercises I read somewhere about
-mechanical switch keyboards and how much better they are for typing for long periods
-of time. I ordered one from NewEgg and started using it for all my typing. That combined 
-with some wrist and hand exercises and here I am a year later still programming 16 or 17
-hours a day sometimes with no pain what so ever. Everyone is like how can you spend $100+
-dollars on a keyboard? I say when it comes to your health and career longevity, $100 is
-not even a concern. I now use a Mitas keyboard at home and a CoolerMaster at work. I will never
-use a cheap or flat key keyboard ever again.</p>
+    <p>I’ve been using Jekyll for my blog for quite some time now. I have also had the
+deployment of it automated for just about as long. While doing some revamping
+and adding a new post a few weeks ago, I decided to update my deploy script I
+had written for Travis CI. I was looking through the docs for Travis and low and
+behold they have added the ability to deploy to Github pages with their dpl
+tool. The way I was doing it worked well, but Travis <a href="https://docs.travis-ci.com/user/deployment">dpl</a> makes it dead simple,
+and it can all be configured from a <a href="https://github.com/danielnolan/danielnolan.github.com/blob/source/.travis.yml">.travis.yml</a> file in your project. Now my
+blog publishing work flow goes like this. Write a post in my source branch of my
+<a href="https://github.com/danielnolan/danielnolan.github.com/">danielnolan.github.com</a> repository. Commit the new post and push the source
+branch to Github. Travis is configured to kick of a build when new code is
+committed to the source branch on Github. Travis runs my default rake task for my
+jekyll project which generates the static html for my blog and then lints it using
+htmlproofer. If htmlproofer doesn’t report any errors Travis deploys my
+generated html site to the master branch at <a href="https://github.com/danielnolan/danielnolan.github.com/">danielnolan.github.com</a>. If errors
+are reported by htmlproofer the build fails and my site is not deployed. The best
+part about all of this is I’m able to host my site on Github pages and use
+Travis to deploy it because my blog code is open source, and lives in a public
+repository on Github.</p>
+
 
     
     <div class="blog-tags"><!-- keyword tag section -->
 
       <i class="fa fa-tags"></i>
       
-      <a href="/tags/programming">Programming, </a>
+      <a href="/tags/automated-deployment">Automated Deployment, </a>
       
-      <a href="/tags/keyboards">Keyboards, </a>
+      <a href="/tags/git">Git, </a>
       
-      <a href="/tags/mechanical-keyboards">Mechanical Keyboards, </a>
+      <a href="/tags/travis-ci">Travis CI, </a>
       
-      <a href="/tags/cherry-mx">Cherry Mx, </a>
+      <a href="/tags/deployment">Deployment, </a>
       
-      <a href="/tags/keebs">Keebs</a>
+      <a href="/tags/jekyll">Jekyll, </a>
+      
+      <a href="/tags/github-pages">Github Pages</a>
       
     </div>
     

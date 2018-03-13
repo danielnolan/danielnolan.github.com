@@ -7,10 +7,37 @@
   <atom:link href="http://danielnolan.com/feed.xml" rel="self" type="application/rss+xml" />
   
   <item>
+    <title>Deploy Your Blog to Github Pages With Travis CI for Free</title>
+    <description>&lt;p&gt;I’ve been using Jekyll for my blog for quite some time now. I have also had the
+deployment of it automated for just about as long. While doing some revamping
+and adding a new post a few weeks ago, I decided to update my deploy script I
+had written for Travis CI. I was looking through the docs for Travis and low and
+behold they have added the ability to deploy to Github pages with their dpl
+tool. The way I was doing it worked well, but Travis &lt;a href=&quot;https://docs.travis-ci.com/user/deployment&quot;&gt;dpl&lt;/a&gt; makes it dead simple,
+and it can all be configured from a &lt;a href=&quot;https://github.com/danielnolan/danielnolan.github.com/blob/source/.travis.yml&quot;&gt;.travis.yml&lt;/a&gt; file in your project. Now my
+blog publishing work flow goes like this. Write a post in my source branch of my
+&lt;a href=&quot;https://github.com/danielnolan/danielnolan.github.com/&quot;&gt;danielnolan.github.com&lt;/a&gt; repository. Commit the new post and push the source
+branch to Github. Travis is configured to kick of a build when new code is
+committed to the source branch on Github. Travis runs my default rake task for my
+jekyll project which generates the static html for my blog and then lints it using
+htmlproofer. If htmlproofer doesn’t report any errors Travis deploys my
+generated html site to the master branch at &lt;a href=&quot;https://github.com/danielnolan/danielnolan.github.com/&quot;&gt;danielnolan.github.com&lt;/a&gt;. If errors
+are reported by htmlproofer the build fails and my site is not deployed. The best
+part about all of this is I’m able to host my site on Github pages and use
+Travis to deploy it because my blog code is open source, and lives in a public
+repository on Github.&lt;/p&gt;
+
+</description>
+    <pubDate>Tue, 13 Mar 2018 00:00:00 +0000</pubDate>
+    <link>http://danielnolan.com/2018/03/13/deploy-your-blog-to-gh-pages-with-travis-ci-for-free/</link>
+    <guid isPermaLink="true">http://danielnolan.com/2018/03/13/deploy-your-blog-to-gh-pages-with-travis-ci-for-free/</guid>
+  </item>
+  
+  <item>
     <title>Asynchronously Linting Ruby and Haml in Vim8 or NeoVim</title>
     <description>&lt;p&gt;In the past I have used Syntastic in Vim for linting code while
 editing. Syntastic was good, but was too slow for large projects and often felt
-like it was slowing me down.ALE (Asynchronous Lint Engine) is a plugin for Vim8
+like it was slowing me down. ALE (Asynchronous Lint Engine) is a plugin for Vim8
 and NeoVim that makes use of the new Asynchronous features introduced in Vim8 to
 allow linting as you type.
 Rather than linting a file when opening or saving like Syntastic, ALE will run
