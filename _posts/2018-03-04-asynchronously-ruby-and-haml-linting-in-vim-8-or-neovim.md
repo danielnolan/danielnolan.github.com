@@ -22,7 +22,7 @@ description: Asynchronous Ruby and Haml linting in Vim 8 or NeoVim
 ---
 In the past I have used Syntastic in Vim for linting code while
 editing. Syntastic was good, but was too slow for large projects and often felt
-like it was slowing me down.ALE (Asynchronous Lint Engine) is a plugin for Vim8
+like it was slowing me down. ALE (Asynchronous Lint Engine) is a plugin for Vim8
 and NeoVim that makes use of the new Asynchronous features introduced in Vim8 to
 allow linting as you type.
 Rather than linting a file when opening or saving like Syntastic, ALE will run
