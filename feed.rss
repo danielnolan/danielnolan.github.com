@@ -7,8 +7,8 @@
   <atom:link href="http://danielnolan.com/feed.xml" rel="self" type="application/rss+xml" />
   
   <item>
-    <title>Deploy Your Blog to Github Pages With Travis CI for Free</title>
-    <description>&lt;p&gt;I’ve been using Jekyll for my blog for quite some time now. I have also had the
+    <title>Deploy Your Jekyll Site to Github Pages With Travis CI for Free</title>
+    <description>&lt;p&gt;I’ve been using &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; for my blog for quite some time now. I have also had the
 deployment of it automated for just about as long. While doing some revamping
 and adding a new post a few weeks ago, I decided to update my deploy script I
 had written for &lt;a href=&quot;https://travis-ci.com/&quot;&gt;Travis CI&lt;/a&gt;. I was looking through the docs for Travis and low and
@@ -29,8 +29,8 @@ public repository on Github.&lt;/p&gt;
 
 </description>
     <pubDate>Tue, 13 Mar 2018 00:00:00 +0000</pubDate>
-    <link>http://danielnolan.com/2018/03/13/deploy-your-blog-to-gh-pages-with-travis-ci-for-free/</link>
-    <guid isPermaLink="true">http://danielnolan.com/2018/03/13/deploy-your-blog-to-gh-pages-with-travis-ci-for-free/</guid>
+    <link>http://danielnolan.com/2018/03/13/deploy-your-jekyll-site-to-gh-pages-with-travis-ci-for-free/</link>
+    <guid isPermaLink="true">http://danielnolan.com/2018/03/13/deploy-your-jekyll-site-to-gh-pages-with-travis-ci-for-free/</guid>
   </item>
   
   <item>
