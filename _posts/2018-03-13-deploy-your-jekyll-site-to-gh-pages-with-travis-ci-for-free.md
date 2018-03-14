@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deploy Your Blog to Github Pages With Travis CI for Free
+title: Deploy Your Jekyll Site to Github Pages With Travis CI for Free
 
 categories:
 - Ruby
@@ -14,11 +14,11 @@ tags:
 - Jekyll
 - Github Pages
 
-description: How I deploy the blog you are reading to Github Pages with Travis for free.
+description: How I deploy the blog you are reading to Github Pages with Travis CI for free.
 
 ---
 
-I've been using Jekyll for my blog for quite some time now. I have also had the
+I've been using [Jekyll] for my blog for quite some time now. I have also had the
 deployment of it automated for just about as long. While doing some revamping
 and adding a new post a few weeks ago, I decided to update my deploy script I
 had written for [Travis CI]. I was looking through the docs for Travis and low and
@@ -42,3 +42,4 @@ public repository on Github.
 [dpl]: https://docs.travis-ci.com/user/deployment
 [Travis CI]: https://travis-ci.com/
 [html-proofer]: https://github.com/gjtorikian/html-proofer
+[Jekyll]: https://jekyllrb.com/
