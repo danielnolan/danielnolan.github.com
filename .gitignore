@@ -10,3 +10,4 @@ _site/*
 .DS_Store
 *.sublime*
 .sass-cache/
+.jekyll-cache/
