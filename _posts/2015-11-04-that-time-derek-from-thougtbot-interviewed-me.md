@@ -21,7 +21,7 @@ description: Derek asks for my take on what it was like to take over a Thoughtbo
 In 2014 I landed a remote gig with a Boston based company called the T1D Exchange.
 Hired as the lead developer on their myglu web app, I was extremely stoked when
 I found out the MVP for the project I was taking over was built by Thougtbot in Boston! 
-I had the please of catching up two of the original Thoughtbot Devs 
+I had the pleasure of catching up two of the original Thoughtbot Devs 
 Derek Prior and Sean Griffin at Rails Conf in Atlanta.
 We chatted for a bit, they both agreed it was one of their favorite projects.
 They decided to follow Sandi Metz's rules to a t on this project.
