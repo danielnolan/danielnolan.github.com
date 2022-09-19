@@ -12,7 +12,7 @@ tags:
 - ORM
 - ActiveRecord
 
-description: How I deploy the blog you are reading to Github Pages with Travis CI for free.
+description: Preloading associations with ActiveRecord::Associations::Preloader
 
 ---
 The other day I was working to reduce the number of N+1 queries for different pages in a rails app.
