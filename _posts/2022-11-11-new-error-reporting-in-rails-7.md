@@ -38,8 +38,8 @@ Rails.error.handle(SomethingIsBroken) do
 end
 ```
 
-The code above will let you handle the error and do something and rails will
-automagically send the error to the reporting service you are using in your app.
+The code above will handle the error if `do_something` raises an error and rails 
+will automagically send it to the reporting service you are using in your app.
 To create a subscriber for the error reporting you just create an intializer
 like this. As of now honeybadger and sentry both create a subscriber for you so
 you can skip this if you use either of them.
@@ -59,5 +59,8 @@ handling errors in your app while still being able to be notified of those
 errors in your error reporting tool of choice. 
 
 As of now both sentry and honeybadger both work with this on rails 7 and newer
-apps. It will be in the docs for the next release of rails also.
+apps. It will be in the docs for the next release of rails also. Check out the 
+[rails error reporting docs].
+
+[rails error reporting docs]: https://edgeguides.rubyonrails.org/error_reporting.html
 https://edgeguides.rubyonrails.org/error_reporting.html
