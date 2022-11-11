@@ -55,12 +55,10 @@ Rails.error.subscribe(ErrorSubscriber.new)
 ```
 
 Thats it, now you can use the consistent `Rails.error.handle` block when
-handling errors in your app while still being able to be notified of those
-errors in your error reporting tool of choice. 
+handling errors in your app and rails will make sure it gets sent to the
+subscribed error reporting service.
 
-As of now both sentry and honeybadger both work with this on rails 7 and newer
-apps. It will be in the docs for the next release of rails also. Check out the 
-[rails error reporting docs].
+It will be in the docs for the next release of rails also, for now check out the 
+[rails error reporting docs] in rails edge guides.
 
 [rails error reporting docs]: https://edgeguides.rubyonrails.org/error_reporting.html
-https://edgeguides.rubyonrails.org/error_reporting.html
