@@ -17,8 +17,8 @@ description: Checking out the new error reporting that was added in rails 7
 ---
 While working through a bug where we were getting duplicate errors reported by
 sidekiq in honeybadger I learned about a new feature that was released in rails
-7 but wasn't documented. Have you ever written some code like this example below 
-where you want to rescue an exception but still report to your error 
+7, but wasn't documented. Have you ever written some code like this example below 
+where you want to rescue an exception and still report to your error 
 reporting service like honeybadger or sentry? 
 
 ``` ruby
@@ -39,7 +39,7 @@ end
 ```
 
 The code above will let you handle the error and do something and rails will
-automagically sent the error to the reporting service you are using in your app.
+automagically send the error to the reporting service you are using in your app.
 To create a subscriber for the error reporting you just create an intializer
 like this. As of now honeybadger and sentry both create a subscriber for you so
 you can skip this if you use either of them.
