@@ -4,7 +4,7 @@ title: Deploy Your Jekyll Site to Github Pages With Travis CI for Free
 
 categories:
 - Ruby
-- Automation
+- Deployment
 
 tags:
 - Automated Deployment
