@@ -76,8 +76,8 @@ On that same raspberry pi I'm running core-dns for local device name
 resolution from my omada router. This requires using a [custom core-dns plugin].
 I also configured a VPN so we can securely get on our home network when not at
 home. All of the network gear is connected to UPSs so it will stay
-powered up if we lose power. I also added an LTE modem that my router will fail over to if the
-main cable internet goes out.
+powered up if we lose power. In case the main cable internet goes out I added an
+LTE modem that my router will fail over to automagically.
 
 I know this is only the beginning, there is so much more to dive into
 and I have all kinds of ideas for things I'd like to automate. I'll try
