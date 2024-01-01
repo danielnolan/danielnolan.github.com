@@ -85,7 +85,7 @@ and I have all kinds of ideas for things I'd like to automate. I'll try
 to do more posts about my setup over the next few months.
 
 
-[Shelly]: https://www.shelly.com/en-us/products/shop/shelly-plus-1-ul
+[Shelly]: https://shelly.com
 [Google announced]: https://www.googlenestcommunity.com/t5/Blog/Create-powerful-automations-with-our-new-script-editor-now-available-in/ba-p/433461
 [Home Assistant]: https://www.home-assistant.io/
 [Home Assistant Yellow]: https://www.home-assistant.io/installation/#extend-with-home-assistant-yellow
