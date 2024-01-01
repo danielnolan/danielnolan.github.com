@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My winter deep dive into home automation
+title: My Winter Deep Dive Into Home Automation & Networking
 
 description: As my outdoor activties shift from outdoor to indoors for
     the winter, I have taken a deep dive into IoT, home automation, and
