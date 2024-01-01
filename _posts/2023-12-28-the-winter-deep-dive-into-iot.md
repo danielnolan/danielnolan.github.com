@@ -8,7 +8,6 @@ description: As my outdoor activties shift from outdoor to indoors for
 
 categories:
 - Home Automation
-- IoT
 
 tags:
 - Home Assistant
